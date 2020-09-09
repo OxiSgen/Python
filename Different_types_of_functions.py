@@ -28,3 +28,8 @@ _startTime = time.time()
 for num in range(count):
     three(a=1, b=2, c=3)
 print("args as dict test:", time.time() - _startTime)
+
+
+''' Positional test: 1.518535852432251
+    args as list test: 2.4950003623962402
+    args as dict test: 3.4079999923706055 '''
