@@ -19,7 +19,6 @@ def get(ns, var):
             return get(scope[ns]['parent'], var)
 
 
-for _ in range(int(input())):
-    cmd, namespace, arg = input().split()
+for cmd, namespace, arg in [input().split() for i in range(int(input()))]:
     # словарь глобальных переменных. Ключ - имя функции, в круглых скобках позиционные параметры
     globals()[cmd](namespace, arg) 
