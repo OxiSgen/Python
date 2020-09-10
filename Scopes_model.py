@@ -9,14 +9,20 @@ def add(ns, var):
     scope[ns]['variables'].add(var)
 
 
-def get(ns, var):
+'''def get(ns, var):
     if var in scope[ns]['variables']:
         print(ns)
     else:
         if scope[ns]['parent'] == 'None':
             print(scope[ns]['parent'])
         else:
-            return get(scope[ns]['parent'], var)
+            return get(scope[ns]['parent'], var)'''
+
+#Версия короче
+def get(ns, var):
+    while not (ns == 'None' or var in scope[ns]['variables']):
+        return get(scope[ns]['parent'], var)
+    print(ns)
 
 
 for cmd, namespace, arg in [input().split() for i in range(int(input()))]:
