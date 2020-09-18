@@ -9,6 +9,15 @@ def rek_obh(parent, child):
     else:
         return 'No'
 
+'''
+Вариант  функии с лямбдой
+
+def rek_obh(parent, child):
+    return child == parent or any(map(lambda pl: isP(parent, child), p[child])) 
+    
+    any возвращает True если есть хоть одно True.
+    map применяет правое выражение к левому
+'''
 
 graph = dict()
 for string in [input().split(' : ') for i in range(int(input()))]:
