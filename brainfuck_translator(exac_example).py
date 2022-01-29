@@ -1,5 +1,5 @@
 def brain_luck(code, input_):
-    vars_ = {'tape': [0] * 30000, 'p': 0, 'input': list(input_), 'res': ''}
+    vars = {'tape': [0] * 30000, 'p': 0, 'input': list(input_), 'res': ''}
     py_code = []
     indent = 0
     for c in code:
@@ -13,5 +13,5 @@ def brain_luck(code, input_):
         elif c == '[': line = 'while tape[p]:'; indent += 1
         elif c == ']': line = ''; indent -= 1
         py_code.append('\t' * cur_indent + line)
-    exec('\n'.join(py_code), vars_)
+    exec('\n'.join(py_code), vars)
     return vars_['res']
