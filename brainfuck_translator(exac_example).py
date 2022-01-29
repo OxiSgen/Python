@@ -14,4 +14,4 @@ def brain_luck(code, input_):
         elif c == ']': line = ''; indent -= 1
         py_code.append('\t' * cur_indent + line)
     exec('\n'.join(py_code), vars)
-    return vars_['res']
+    return vars['res']
